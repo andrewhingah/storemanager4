@@ -15,12 +15,13 @@
     <div class="maincontent">
     
 	    <div class="form">
-	        <form class="this-form ">
+	        <form class="this-form " id="signup">
 	        	<p>Sign Up</p>
-	            <input type="email" name="email" placeholder="Enter your email email" required autofocus/>
-	            <input type="text" name="name" placeholder="Enter your name" required autofocus/>
-	            <input type="password" name="password" placeholder="Enter your password" required/>
-                <input type="password" name="password" placeholder="Confirm password" required/>
+                <input type="text" name="name" id="name" placeholder="Enter name" required autofocus/>
+	            <input type="email" name="email" id="email" placeholder="Enter email" required autofocus/>
+	            <input type="password" name="password" id="password" placeholder="Enter password" required/>
+                <input type="text" name="role" id="role" placeholder="Enter role" required autofocus/>
+                <!-- <input type="password" name="password" placeholder="Confirm password" required/> -->
 	            <button id="submit" type="submit">sign up</button>
 	        </form>
 	    </div>
@@ -29,4 +30,5 @@
     <footer>
         <p>Copyright &copy; 2018 STOREMANAGER</p>
     </footer>
+    <script src="js/signup.js" type="text/javascript"></script>
 </body>
