@@ -4,7 +4,7 @@ document.getElementById('login').addEventListener('submit', login)
 // this function is called when the listener responds to a submit event
 function login(e){
 	// prevent default behaviour
-	event.preventDefault();
+	e.preventDefault();
 
 	// define url
 	let url = "https://hingastores.herokuapp.com/api/v2/auth/login"
@@ -23,15 +23,18 @@ function login(e){
 		body: JSON.stringify(data)
 	};
 
-	// use the fetch api
 	fetch(url, loginData)
-	.then(function(response) {return response.json()})
-	.then(function(response){
-
-		if (response.message === "Logged in successfully!") {
-			window.location.href = "ui/products-att.html";
+	.then ((res) => res.json())
+	.then ((data) => {
+		localStorage.setItem('token', data.token)
+		if(data.message === "Logged in successfully!"){
+			window.location.href = 'ui/products-att.html';
+		} else{
+			let error_message = document.getElementById('errorMessage')
+			if (errorMessage){
+				errorMessage.innerHTML = data.message
+			}
 		}
-	console.log(response.status)
-	console.log(response.message)
 	})
+	.catch((err) => console.log(err))
 }
