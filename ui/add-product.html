@@ -20,13 +20,12 @@
             <div><a href="attendants.html">Attendants</a></div>
     	</div>
 	    <div class="form">
-	        <form class="this-form ">
+	        <form class="this-form " id="add-product">
 	        	<p>Add a new product</p>
-	        	<input type="text" name="product-id" placeholder="Enter product-id" required/>
-	            <input type="text" name="category" placeholder="Enter product-category" required/>
-	            <input type="text" name="name" placeholder="Enter product-name" required/>
-	            <input type="text" name="number" placeholder="Enter number of items" required/>
-                <input type="text" name="price" placeholder="Enter Price per Unit" required autofocus/>
+	            <input type="text" id="category" placeholder="product-category" required/>
+	            <input type="text" id="name" placeholder="product-name" required/>
+	            <input type="text" id="quantity" placeholder="number of items" required/>
+                <input type="text" id="price" placeholder="price per Unit" required autofocus/>
 	            <button id="submit" type="submit">Submit Product</button>
 	        </form>
 	    </div>
@@ -35,4 +34,5 @@
     <footer>
         <p>Copyright &copy; 2018 STOREMANAGER</p>
     </footer>
+    <script src="js/add-product.js" type="text/javascript"></script>
 </body>

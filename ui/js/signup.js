@@ -4,7 +4,7 @@ document.getElementById('signup').addEventListener('submit', signup)
 // this function is called when the listener responds to a submit event
 function signup(e){
 	// prevent default behaviour
-	event.preventDefault();
+	e.preventDefault();
 
 	// define url
 	let url = "https://hingastores.herokuapp.com/api/v2/auth/signup"
