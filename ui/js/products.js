@@ -45,12 +45,13 @@ window.onload=function viewProducts(){
 
     header=`
           <tr class="header">
-                <th style="width:10%;">ID</th>
-                <th style="width:10%;">Name</th>
-                <th style="width:10%;">Category</th>
-                <th style="width:10%;">Quantity</th>
-                <th style="width:10%;">Price/Unit</th>
-                <th style="width:10%;">Update</th>
+                <th style="width:5%;">ID</th>
+                <th style="width:5%;">Name</th>
+                <th style="width:5%;">Category</th>
+                <th style="width:5%;">Quantity</th>
+                <th style="width:5%;">Price/Unit</th>
+                <th style="width:5%;">Action</th>
+                <th style="width:5%;">Action</th>
               </tr>
            `
 
@@ -59,14 +60,34 @@ window.onload=function viewProducts(){
 
     data['products'].forEach(function(product){
       console.log(product.price)
+      let item=JSON.stringify(product)
+      item="  "+ item +"  "
+    
+
       table.innerHTML += '<tr>'+
       '<td>'+product.id +'</td>'+
       '<td>'+ product.name +'</td>'+
       '<td>'+ product.category + '</td>'+
       '<td>'+ product.quantity + '</td>'+
       '<td>'+ product.price + '</td>'+
+      '<td>'+ `<button onclick='setEditForm(${item})'>update</button>` + '</td>'+
       '</tr>';
 
     });
   })
+}
+
+
+
+function setEditForm(product){
+
+document.getElementById('id').value=product.id;
+document.getElementById('category').value=product.category;
+document.getElementById('name').value=product.name
+document.getElementById('quantity').value=product.quantity
+document.getElementById('price').value=product.price
+
+  console.log(product)
+
+
 }
