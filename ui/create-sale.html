@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Create Sale</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+</head>
+<body>
+     <div class="navbar">
+        <p>Store Manager</p>
+        <ul class="nav-items">
+            <li class="nav-item float-right"><a href="../index.html">Sign Out</a></li>
+        </ul>
+    </div>
+    <div class="maincontent">
+    	<div class="flex-container">
+            <div><a href="home.html">Home</a></div>
+	    	<div><a href="products.html">Inventory</a></div>
+            <div><a href="home.html">Sales</a></div>
+            <div><a href="attendants.html">Attendants</a></div>
+    	</div>
+	    <div class="form">
+	        <form class="this-form " id="add-sale">
+	        	<p>Create a new sale</p>
+                <input type="text" id="id" placeholder="product-id" required/>
+                <input type="text" id="quantity" placeholder="number of items" required/>
+	            <button id="submit" type="submit">Create Sale</button>
+	        </form>
+	    </div>
+    </div>
+    
+    <footer>
+        <p>Copyright &copy; 2018 STOREMANAGER</p>
+    </footer>
+    <script src="js/create-sale.js" type="text/javascript"></script>
+</body>

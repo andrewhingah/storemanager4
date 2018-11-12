@@ -1,3 +1,6 @@
+const token = localStorage.getItem("token")
+const access_token = "Bearer " + token
+
 // event listener waits for a click on submit button
 document.getElementById('signup').addEventListener('submit', signup)
 
@@ -20,7 +23,9 @@ function signup(e){
 	let signupData = {
 		method: 'POST',
 		headers: {
-			"Content-Type": "application/json"
+			'Accept': 'application/json, text/plain, */*',
+			"Content-Type": "application/json",
+			'Authorization': access_token
 		},
 		body: JSON.stringify(data)
 	};
