@@ -28,7 +28,7 @@ function login(e){
 	.then ((data) => {
 		localStorage.setItem('token', data.token)
 		if(data.message === "Logged in successfully!"){
-			window.location.href = 'ui/home.html';
+			window.location.href = 'ui/products.html';
 		} else{
 			let error_message = document.getElementById('errorMessage')
 			if (errorMessage){
