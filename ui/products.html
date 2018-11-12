@@ -30,13 +30,35 @@
              
               
             </table>
-            <h2 id="output">Products</h2>
             
-	    </div>
+            
+        </div>
+        <div class="editproduct" id="editproduct">
+            <form action="">
+                <p>Modify Product Details</p>
+                <div>
+                    <input type="text" id="id" placeholder="Enter product-id" required/>
+                </div>
+                <div>
+                    <input type="text" id="category" placeholder="Enter product-category" required/>
+                </div>
+                <div>
+                    <input type="text" id="name" placeholder="Enter product-name" required/>
+                </div>
+                <div>
+                    <input type="text" id="quantity" placeholder="Enter number of items" required/>
+                </div>
+                <div>
+                    <input type="text" id="price" placeholder="Enter Price per Unit" required autofocus/>
+                </div>
+                <button id="submit" type="submit">Save</button>
+            </form>
+        </div>
     </div>
     
     <footer>
         <p>Copyright &copy; 2018 STOREMANAGER</p>
     </footer>
     <script src="js/products.js"></script>
+    <script src="js/edit-product.js"></script>
 </body>
