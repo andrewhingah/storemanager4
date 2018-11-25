@@ -18,7 +18,9 @@ function login(e){
 	let loginData = {
 		method: 'POST',
 		headers: {
-			"Content-Type": "application/json"
+			"Content-Type": "application/json",
+			'Access-Control-Allow-Origin': '*',
+			'Access-Control-Request-Method': 'POST'
 		},
 		body: JSON.stringify(data)
 	};

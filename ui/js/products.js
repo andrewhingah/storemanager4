@@ -31,10 +31,13 @@ function myFunction() {
 
 window.onload=function viewProducts(){
   fetch('https://hingastores.herokuapp.com/api/v2/products', {
+    'method': 'GET',
     headers: {
-      'method': 'GET',
+      'accept': 'application/json',
       'Content-Type': 'application/json',
-      'Authorization': access_token
+      'Authorization': access_token,
+      'Access-Control-Allow-Origin': '*',
+      'Access-Control-Request-Method': 'GET',
     }
   })
   .then((res) => res.json())
