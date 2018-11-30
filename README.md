@@ -15,12 +15,17 @@ This is an implementation of the frontend which consumes API endpoints from http
 
 - Open the app on the hosted link https://andrewhingah.github.io/storemanager4/
 - Sign in using the default admin credentials:
-Email: `super@admin.com`, Password: `A123@admin`
+    Email: `super@admin.com`,
+    Password: `A123@admin`
 - To add new products, navigate to `add new product` button and fill all the details.
-- To edit product details, click on `update` button on any product and the details you wish to modify then save.
+- To search for a specific product, type the product name on the search bar.
+- To edit product details, click on `update` button on any product and edit the details you wish to modify then save.
 - To register a new user, navigate to `add new user` button and fill all the details.
 - To create a sale record, first sign in with the newly registered user credentials.
 Then navigate to `create sale record` page and input the product id and quantity then submit.
-- To view the sales records, you have to be signed in as the default admin, then navigate to `sales` page
+- To view all sales records, you have to be signed in as the default admin, then navigate to `sales` page
+
+## Authors
+Andrew Hinga
 
 
