@@ -1,7 +1,7 @@
-document.getElementById("submit").addEventListener("click",updateProduct)
+document.getElementById("submit").addEventListener("click",updateProduct);
 
 function updateProduct(e){
-e.preventDefault()
+e.preventDefault();
   let product = {
     id: document.getElementById('id').value,
     category: document.getElementById('category').value,
@@ -10,7 +10,7 @@ e.preventDefault()
     price: document.getElementById('price').value
   };
 
-  let url='https://hingastores.herokuapp.com/api/v2/products/'+product.id
+  let url='https://hingastores.herokuapp.com/api/v2/products/'+product.id;
   fetch(url,{
       'method':'PUT',
       'headers':{
@@ -20,6 +20,6 @@ e.preventDefault()
       body:JSON.stringify(product)
   })
   .then((res) => res.json())
-  .then((data) => console.log(data))
+  .then((data) => console.log(data));
 
 }

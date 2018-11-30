@@ -1,7 +1,7 @@
-const token = localStorage.getItem("token")
-const access_token = "Bearer " + token
+const token = localStorage.getItem("token");
+const access_token = "Bearer " + token;
 
-document.getElementById('add-product').addEventListener('submit', createProduct)
+document.getElementById('add-product').addEventListener('submit', createProduct);
 
 function createProduct(e) {
 	e.preventDefault();
@@ -25,5 +25,5 @@ function createProduct(e) {
 		body: JSON.stringify(data)
 	})
 	.then((res) => res.json())
-	.then((data) => console.log(data))
+	.then((data) => console.log(data));
 }

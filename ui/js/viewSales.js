@@ -1,5 +1,5 @@
 // retrieve tocken
-const token = localStorage.getItem("token")
+const token = localStorage.getItem("token");
 const access_token = "Bearer " + token
 
 if (token === null){
@@ -52,7 +52,7 @@ window.onload=function viewSales(){
               </tr>
            `
 
-      table.innerHTML=header
+      table.innerHTML=header;
 
 
     data['Sales'].forEach(function(sale){
@@ -65,5 +65,5 @@ window.onload=function viewSales(){
       '</tr>';
 
     });
-  })
-}
+  });
+};

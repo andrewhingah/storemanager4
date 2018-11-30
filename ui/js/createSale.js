@@ -1,7 +1,7 @@
 const token = localStorage.getItem("token")
 const access_token = "Bearer " + token
 
-document.getElementById('add-sale').addEventListener('submit', createSale)
+document.getElementById('add-sale').addEventListener('submit', createSale);
 
 function createSale(e) {
 	e.preventDefault();
@@ -23,5 +23,5 @@ function createSale(e) {
 		body: JSON.stringify(data)
 	})
 	.then((res) => res.json())
-	.then((data) => console.log(data))
+	.then((data) => console.log(data));
 }
