@@ -32,7 +32,7 @@ function login(e){
 		if(data.message === "Logged in successfully!"){
 			window.location.href = 'ui/products.html';
 		} else{
-			let error_message = document.getElementById('errorMessage')
+			let errorMessage = document.getElementById('errorMessage')
 			if (errorMessage){
 				errorMessage.innerHTML = data.message
 			}
